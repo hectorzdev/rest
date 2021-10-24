@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    background-image: url(../images/backend-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+#policyModal{
+    font-family: 'Times New Roman',serif;
+}
+.main-header-order{
+    background-color: #000000ba;
+    padding: 15px;
+}
+.main-header-order .logo img{
+    width: 71px;
+}
+.main-header-order .logo{
+    font-size: 33px;
+    font-weight: 600;
+    letter-spacing: 15px;
+    margin-left: 14px;
+    top: 50%;
+    left: 50%;
+    font-family: 'Times New Roman',serif;
+    background-image: linear-gradient( to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100% );
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.footer{
+    background-color: #000000ba;
+    padding: 5px;
+}
+
+.content{
+    min-height: 700px;
+}
+
+#backtohome{
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    top: 23px;
+}
+
+.book-service{
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 4px black;
+}
+
+#zipcode{
+    width: 100%;
+    text-align: center;
+    padding: 11px;
+    border-radius: 40px;
+    border: 0;
+}
+
+.order-input{
+    
+    width: 100%;
+    text-align: center;
+    padding: 11px;
+    border-radius: 40px;
+    border: 0;
+
+}
+
+.order-input-group{
+    position: relative;
+}
+
+.order-input-group label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+}
+
+.order-input-group.active label{
+    top: 31%;
+    left: 13%;
+    font-size: 13px;
+}
+
+.zipcode-ebject{
+    position: relative;
+}
+
+#zipcode-result{
+    position: absolute;
+    top: 54px;
+    background-color: white;
+    width: 80%;
+    left: 10%;
+    max-height: 300px;
+    overflow: auto;
+    display: none;
+    z-index: 3;
+}
+
+#zipcode-result select{
+    padding: 15px;
+}
+
+#zipcode-overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+    display: none;
+}
+
+.result-element{
+    padding: 5px 15px;
+    
+}
+
+.border-gold{
+    padding: 2px;
+    background: linear-gradient( 
+270deg
+ , rgba(251,240,164,1) 0%, rgba(175,137,48,1) 100%);
+    display: flex;
+    border-radius: 17px;
+}
+
+.service-group{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 250px;
+    border-radius: 3px;
+    margin: 0 1.2%;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 17px;
+    margin: auto;
+}
+
+
+.service-group::after{
+    content: "";
+    display: inline-block;
+    position: relative;
+    background-color: #66696c;
+    opacity: 0.2;
+    width: 100%;
+    height: 250px;
+    border-radius: 17px;
+    transition: 0.3s;
+}
+
+.service-group:hover::after{
+    opacity: .25;
+}
+
+.service-group span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    z-index: 1;
+}
+
+.service-group.s1{
+    background-image: url(../images/asian-woman-getting-thai-herbal-compress-massage-spa.jpg);
+    background-position: center;
+}
+
+.massage-style{
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 27px;
+}
+
+.massage-style:hover{
+    cursor: pointer;
+    background: linear-gradient( 270deg, rgba(251,240,164,1) 0%, rgba(175,137,48,1) 100%);
+}
+
+.massage-style.active{
+    background: linear-gradient( 270deg, rgba(251,240,164,1) 0%, rgba(175,137,48,1) 100%);
+}
+
+.next-step{
+    margin-top: 74px;
+    padding: 8px 74px;
+    border: 0;
+    border-radius: 50px;
+    background: linear-gradient( 
+270deg
+, rgba(251,240,164,1) 0%, rgba(175,137,48,1) 100%);
+}
+
+.policy-group{
+    display: grid;
+}
+
+.policy-input{
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.policy-submit{
+    width: 90%;
+}
+
+.img-preview{
+    border: 2px solid wheat;
+}
+
+.checkout-price{
+    /* font-size: 33px; */
+    font-weight: 600;
+    letter-spacing: 15px;
+    margin-left: 14px;
+    top: 50%;
+    left: 50%;
+    /* font-family: 'Times New Roman',serif; */
+    background-image: linear-gradient( to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100% );
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.text-gold{
+    /* font-size: 33px; */
+    font-weight: 600;
+    /* letter-spacing: 15px; */
+    margin-left: 14px;
+    /* top: 50%;
+    left: 50%; */
+    /* font-family: 'Times New Roman',serif; */
+    background-image: linear-gradient( to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100% );
+    color: transparent;
+    -webkit-background-clip: text;
+    
+}
+
+.contact-us-order{
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 8px 30px;
+    width: 87%;
+    background-color: white;
+    text-align: center;
+    color: black;
+    border-radius: 50px;
+}
+
+.your-order{
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 4px black;
+    font-family: 'Times New Roman',serif;
+}
+
+
+.price-card{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    margin: 0 1.2%;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 17px;
+    padding: 10px 20px;
+    margin: auto;
+}
+
+
+.price-card::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000a6;
+    opacity: 0.8;
+    width: 100%;
+    height: -webkit-fill-available;
+    border-radius: 17px;
+    transition: 0.3s;
+}
+
+.price-card:hover::after{
+    opacity: 0;
+}
+
+.price-card.active::after{
+    opacity: 0 !important;
+}
+
+.price-card.start{
+    background-image: url(../images/pricing/60.jpg);
+}
+
+.price-card.medium{
+    background-image: url(../images/pricing/90.jpg);
+}
+
+.price-card.advanced{
+    background-image: url(../images/pricing/120.jpg);
+}
+
+.price-card .price-ch{
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: left;
+
+    background-image: linear-gradient( to right, #cb9b51 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #cb9b51 100% );
+    color: transparent;
+    -webkit-background-clip: text;
+    position: relative;
+    text-shadow: 1px 2px 3px #270000;
+}
+
+
+.price-card .price-ch.basic::before{
+    content: "BASIC";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: left;
+    background-image: linear-gradient( to right, #cb9b51 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #cb9b51 100% );
+    color: transparent;
+    -webkit-background-clip: text;
+    text-shadow:none;
+}
+
+.price-card .price-ch.medium::before{
+    content: "MEDIUM";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: left;
+    background-image: linear-gradient( to right, #cb9b51 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #cb9b51 100% );
+    color: transparent;
+    -webkit-background-clip: text;
+    text-shadow:none;
+}
+
+.price-card .price-ch.advanced::before{
+    content: "ADVANCED";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: left;
+    background-image: linear-gradient( to right, #cb9b51 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #cb9b51 100% );
+    color: transparent;
+    -webkit-background-clip: text;
+    text-shadow:none;
+}
+
+.price-card .price{
+    font-size: 93px;
+    margin-top: 55px;
+    position: relative;
+    text-shadow: 2px 3px 5px black;
+    color: white;
+    margin-right: auto;
+    margin-left: 20px;
+    /* margin-top: 30px; */
+}
+
+.price-card .price::before{
+    content: "$";
+    font-size: 39px;
+    position: absolute;
+    left: -23px;
+}
+
+.price-card .hr{
+    width: 100%;
+    height: 1.2px;
+    background-color: white;
+}
+
+.price-card .price-co{
+    color: white;
+    font-size: 20px;
+    margin: 20px 0;
+    text-align: left;
+    text-shadow: 0 0 3px black;
+}
+
+.price-card .price-book-now{
+    width: 100%;
+    padding: 10px 10px;
+    background: linear-gradient( 270deg, rgba(251,240,164,1) 0%, rgba(175,137,48,1) 100%);
+    border-radius: 20px;
+    color: black;
+    
+}
