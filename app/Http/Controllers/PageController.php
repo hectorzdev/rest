@@ -18,12 +18,13 @@ class PageController extends Controller
         return view('backend.index' , ['page' => 'orders']);
     }
 
-    public function order()
+    public function order($price)
     {
         $session = "";
         $order = "";
         $policy = "";
-        if (session()->has('order_session')) {
+        // echo session('order_session')->count();
+        if (session()->has('order_session') ) {
             $session = true;
             $order = Order::where('order_session' , session('order_session'))->first();
             $policy = Policy::where('order_id' , $order->id)->first();
@@ -31,6 +32,6 @@ class PageController extends Controller
             $session = false;
         }
         // dd($session);
-        return view('frontend.order' , ['session' => $session , 'order' => $order , 'policy' => $policy]);
+        return view('frontend.order' , ['session' => $session , 'order' => $order , 'policy' => $policy , 'price' => $price]);
     }
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('frontend/css/manage.css')}}">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="shortcut icon" href="{{asset('frontend/images/icon.png')}}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
@@ -27,7 +28,7 @@
                     <a class="nav-link {{$page == 'zipcode' ? 'active' : ''}}" href="{{url('zipcode')}}">Zipcode</a>
                 </li>
                 <li class="nav-item ml-3">
-                    <a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i> Sign out</a>
+                    <a class="nav-link" href="#" onclick="logout()"><i class="fas fa-sign-in-alt"></i> Sign out</a>
                 </li>
             </ul>
         </div>
@@ -52,9 +53,20 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script>
+        var _token = $('meta[name="csrf-token"]').attr('content')
+
         $(document).ready(function(){
+            
             $('.dataTable').dataTable()
         })
+
+        function logout(){
+            
+            $.post(`{{url('logout')}}` , {_token:_token}  , function(){
+
+            })
+            location.reload()
+        }
     </script>
 
     @yield('script')

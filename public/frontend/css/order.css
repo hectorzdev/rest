@@ -10,6 +10,7 @@ body{
 #policyModal{
     font-family: 'Times New Roman',serif;
 }
+
 .main-header-order{
     background-color: #000000ba;
     padding: 15px;
@@ -266,7 +267,15 @@ body{
     padding: 20px;
     background-color: white;
     box-shadow: 0 0 4px black;
-    font-family: 'Times New Roman',serif;
+    /* font-family: 'Times New Roman',serif; */
+    border-radius: 15px;
+}
+
+.book-style{
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #f9f9f9;
 }
 
 
@@ -414,4 +423,37 @@ body{
     border-radius: 20px;
     color: black;
     
+}
+
+.sm-d-block{
+    display: none;
+}
+@media only screen and (max-width: 990px) {
+    .sm-d-none{
+        display: none !important;
+    }
+
+    .sm-d-block{
+        display: block !important;
+    }
+
+    #backtohome{
+        top: 85px !important;
+    }
+
+    .order-input-group.active label{
+        left: 21%;
+    }
+}
+
+.pricing-card-select{
+    background-color: white;
+    padding: 7px 20px;
+    text-align: center;
+    border-radius: 40px;
+    border: 2px solid wheat;
+}
+
+.pricing-card-select.active{
+    background: linear-gradient( 270deg, rgba(251,240,164,1) 0%, rgba(175,137,48,1) 100%)
 }

@@ -15,14 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PageController@index');
 Route::get('/home', 'PageController@index')->name('home');
-Route::get('ordernow', 'PageController@order');
+Route::get('booknow/{price}', 'PageController@order');
 Route::get('loadzipcode', 'ZipcodeController@loadZipcode');
-Auth::routes();
 Route::get('register', 'PageController@index')->name('register');
 Route::post('confirm_policy' , 'OrderController@policy');
+Route::resource('order', 'OrderController');
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin', 'OrderController@index');
     Route::resource('zipcode', 'ZipcodeController');
-    Route::resource('order', 'OrderController');
+    Route::get('view_booking/{id}' ,  'OrderController@viewBooking');
+    Route::put('update_booking_status/{id}' ,  'OrderController@updateBookingStatus');
 });
 
+Auth::routes();

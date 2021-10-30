@@ -1,7 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body{
     margin: 0;
     font-family: 'Poppins', sans-serif !important;
+}
+
+.sm-d-block{
+    display: none;
+}
+
+.pricing-mb{
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 990px) {
+    /* .main-header {
+        background-color: black !important;
+    } */
+    .pricing-mb{
+        display: block !important;
+    }
+    .sm-d-none{
+        display: none;
+    }
+
+    .sm-ml-auto{
+        margin-left: auto;
+
+    }
+    .sm-p-n{
+        padding: 0.5rem 1rem !important;
+    }
+
+    .main-banner {
+        height: 400px !important;
+    }
+
+    .main-banner .container{
+        height: 400px !important;
+    }
+
+    .main-content-banner{
+        height: 200px !important;
+    }
+
+    .our-service{
+        padding: 5px 10px !important;
+    }
+
+    .banner-book-now{
+        padding: 5px 10px !important;
+    }
+
+    .main-content-banner{
+        left: 50% !important;
+        top: 55% !important;
+    }
+
+    .sm-d-block{
+        display: block !important;
+    }
+
+    #how-it-work{
+        padding: 5px !important;
+    }
+
+    .sm-size-12{
+        font-size: 12px;
+    }
+
+    .service-group{
+        height: 160px !important;
+        margin-bottom: 30px;
+    }
+
+    .service-group::after{
+        height: 160px !important;
+    }
+
 }
 
 .main-header{
@@ -55,7 +133,7 @@ body{
 .book-now{
     background-color: white;
     border-radius: 50px;
-    padding: 10px 40px !important;
+    padding: 10px 40px;
     font-size: 16px;
     font-weight: 600;
     color: black !important;
